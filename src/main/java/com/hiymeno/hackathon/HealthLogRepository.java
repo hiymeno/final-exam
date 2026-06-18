@@ -15,14 +15,14 @@ public class HealthLogRepository {
     }
 
     private HealthLog mapRow(java.sql.ResultSet rs, int rowNum) throws java.sql.SQLException {
-        return new HealthLog(
-                rs.getInt("id"),
-                rs.getString("log_date"),
-                rs.getDouble("sleep_hours"),
-                rs.getInt("steps"),
-                rs.getInt("mood_score"),
-                rs.getString("risk_level")
-        );
+        HealthLog log = new HealthLog();
+        log.setId(rs.getInt("id"));
+        log.setLogDate(rs.getString("log_date"));
+        log.setSleepHours(rs.getDouble("sleep_hours"));
+        log.setSteps(rs.getInt("steps"));
+        log.setMoodScore(rs.getInt("mood_score"));
+        log.setRiskLevel(rs.getString("risk_level"));
+        return log;
     }
 
     public List<HealthLog> findAll() {

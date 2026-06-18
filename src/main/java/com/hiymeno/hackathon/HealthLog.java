@@ -10,15 +10,6 @@ public class HealthLog {
 
     public HealthLog() {}
 
-    public HealthLog(int id, String logDate, double sleepHours, int steps, int moodScore, String riskLevel) {
-        this.id = id;
-        this.logDate = logDate;
-        this.sleepHours = sleepHours;
-        this.steps = steps;
-        this.moodScore = moodScore;
-        this.riskLevel = riskLevel;
-    }
-
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getLogDate() { return logDate; }
